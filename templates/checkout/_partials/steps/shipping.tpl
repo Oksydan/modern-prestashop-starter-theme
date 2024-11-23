@@ -41,7 +41,7 @@
           {block name='delivery_options'}
             <div class="delivery-options">
                 {foreach from=$delivery_options item=carrier key=carrier_id}
-                  <div class="mb-3 checkout-option-block checkout-option js-delivery-option {if $delivery_option == $carrier_id} selected{/if}">
+                  <div class="mb-3 checkout-option-block checkout-option delivery-option js-delivery-option {if $delivery_option == $carrier_id} selected{/if}">
                     <input class="custom-control-input" type="radio" name="delivery_option[{$id_address}]" id="delivery_option_{$carrier.id}" value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
 
                     <label class="card mb-0 cursor-pointer h-100" for="delivery_option_{$carrier.id}">
