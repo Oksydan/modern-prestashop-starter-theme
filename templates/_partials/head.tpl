@@ -41,6 +41,8 @@
   {/if}
   {if $page.canonical}
     <link rel="canonical" href="{$page.canonical}">
+  {else}
+    <link rel="canonical" href="{$urls.base_url}">
   {/if}
   {block name='head_hreflang'}
     {foreach from=$urls.alternative_langs item=pageUrl key=code}
